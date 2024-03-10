@@ -21,5 +21,4 @@ urlpatterns = [
     path('detailsP/<int:id>/',v2.detailsproduct,name='detailsproduct'),
 
     
-    
 ]

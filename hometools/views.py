@@ -9,18 +9,12 @@ from .models import ProductDetails, Product
 def showproduct(request):
     template = loader.get_template('showproduct.html')
     appliances = ProductDetails.objects.select_related('productid')
-    print(appliances.query)
     context={'appliances':appliances, 'request':request}
     return HttpResponse(template.render(context))
 
 
 def detailsproduct(request , id):
-     template=loader.get_template('details.html')
-     currentuser=request.user
-     print(currentuser.id)
-     phone=ProductDetails.objects.select_related('productid').filter(id=id)
-     context={
-         'phone':phone,
-         'request':request
-     }
+     template=loader.get_template('detailsHome.html')
+     appliances=ProductDetails.objects.select_related('productid').filter(id=id)
+     context={'appliances':appliances, 'request':request}
      return HttpResponse(template.render(context))

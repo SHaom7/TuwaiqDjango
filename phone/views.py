@@ -60,16 +60,16 @@ def add_to_cart(requset,id):
 
 def details(request , id):
      template=loader.get_template('details.html')
-     
      currentuser=request.user
      print(currentuser.id)
      phone=ItemDetails.objects.select_related('itemsid').filter(id=id)
-    
      context={
          'phone':phone,
          'request':request
      }
      return HttpResponse(template.render(context))
+
+
 @csrf_exempt
 def auth_logout(request):
     if request.method=="POST":

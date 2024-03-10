@@ -9,6 +9,7 @@ class Product(models.Model):
 
 class ProductDetails(models.Model):
  brand=models.CharField(max_length=50, null=True)
+ des=models.CharField(max_length=150, null=True)
  color=models.CharField(max_length=50)
  price=models.FloatField()
  qty=models.IntegerField()
