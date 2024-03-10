@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phone',
-    'bootstrap5'
-    
+    'bootstrap5',
+    'phone_api',
+    'rest_framework',
+    'hometools'
 ]
 
 MIDDLEWARE = [

@@ -27,7 +27,7 @@
         <div class="container">
           <div class="row gx-5">
             <aside class="col-lg-6">
-             {%for item in phone%}
+             {%for item in appliances %}
               <div class="d-flex justify-content-center mb-3">
                
                 <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="#" class="item-thumb">
@@ -40,7 +40,7 @@
             <main class="col-lg-6">
               <div class="ps-lg-3">
                 <h4 class="title text-dark">
-                <span class="badge bg-secondary"> {{item.itemsid.name}}</span>
+                <span class="badge bg-secondary"> {{item.productid.name}}</span>
                  
                 </h4>
                 <div class="d-flex flex-row my-3">

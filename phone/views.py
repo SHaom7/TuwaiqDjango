@@ -2,9 +2,10 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.template import loader
 from .models import Items,ItemDetails,Cart
-#from .forms  import CreateUserForm,LoginUserForm
+from .forms  import CreateUserForm,LoginUserForm
 from django.contrib.auth import login, logout , authenticate
 from django.contrib.auth.decorators import login_required
+from hometools import views as hv
 
 from django.views.decorators.csrf import csrf_exempt
 
@@ -74,10 +75,10 @@ def auth_logout(request):
     if request.method=="POST":
         logout(request)
         return redirect("/")
+    
 def showphone(request):
     template=loader.get_template('showphone.html')
     phone=ItemDetails.objects.select_related('itemsid')
-   
     print(phone.query)
     return HttpResponse(template.render({'phone':phone, 'request':request}))
 
