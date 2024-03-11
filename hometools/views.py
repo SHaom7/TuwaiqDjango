@@ -21,7 +21,7 @@ def detailsproduct(request , id):
      return HttpResponse(template.render(context))
 
 
-def add_to_cart(requset,id):
+def add_to_cart2(requset,id):
      currentuser=requset.user
      discount=2
      state=False

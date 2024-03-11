@@ -114,7 +114,3 @@ def auth_login(request):
      context={'form':form}
      return render(request,'auth_login.html',context)
                         
-
-def print_invoice(request, id):
-     template=loader.get_template('invoice.html')
-     
