@@ -22,9 +22,8 @@ def checkout(request):
             
        }
        return HttpResponse(template.render(context=context)) 
+
 def index(request):
-   
-   
     template=loader.get_template('index.html')
     return HttpResponse(template.render({'request':request}))
 
@@ -116,3 +115,6 @@ def auth_login(request):
      return render(request,'auth_login.html',context)
                         
 
+def print_invoice(request, id):
+     template=loader.get_template('invoice.html')
+     

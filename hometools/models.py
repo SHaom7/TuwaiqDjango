@@ -20,3 +20,16 @@ class ProductDetails(models.Model):
  productid=models.ForeignKey(Product,on_delete=models.CASCADE,null=True)
 def __str__(self):
         return self.price
+
+
+class Cart(models.Model):
+    Id_product=models.IntegerField()
+    Id_user=models.IntegerField()
+    price=models.FloatField()
+    qty=models.IntegerField()
+    tax=models.FloatField()
+    total=models.FloatField()
+    discount=models.FloatField()
+    net=models.FloatField()
+    status=models.BooleanField()
+    Created_at=models.DateTimeField(auto_now_add=True)

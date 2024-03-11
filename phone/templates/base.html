@@ -16,7 +16,6 @@
     <style>
         #container-cards
         {
-            margin-top: 15%;
             justify-content: center;
             align-items: center;
         }
@@ -111,7 +110,7 @@
         }
 
         footer {
-            margin-top: 15%;
+            margin-top: 50px;
                 }
            
      </style>
@@ -150,7 +149,7 @@
         <!-- Left links -->
       </div>
       <!-- Collapsible wrapper -->
-  
+
       <!-- Right elements -->
       <div class="d-flex align-items-center">
         <!-- Notifications -->
@@ -165,8 +164,8 @@
               </td>
               <td class="pt-1">
                 <form action="{%  url 'auth_logout' %}" method="post">
-                  <button class="btn btn-link">logout</button>
-                </form>
+                    <input type="submit" value="Logout" class="mt-1 text-white" style="border: none;background-color: transparent;">
+                </form>            
               </td>
               <td>
                 <i class="bi bi-bag text-white"></i>
